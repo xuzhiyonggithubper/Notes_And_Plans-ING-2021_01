@@ -1,7 +1,7 @@
 # Web前端开发阶段
-阶段1：原代码开发阶段（html+css+javascript），简称hcj开发。
-阶段2：代码库阶段（js中使用jQuery，css中使用Bootstrap响应式框架（有成熟的网站结构等））。
-阶段3：框架开发阶段，MVC模式和MVVM模式。
+- 阶段1：原代码开发阶段（html+css+javascript），简称hcj开发。
+- 阶段2：代码库阶段（js中使用jQuery，css中使用Bootstrap响应式框架（有成熟的网站结构等））。
+- 阶段3：框架开发阶段，MVC模式和MVVM模式。
 # 前端框架系统架构
 - MVC和MVVM模式
 - 主流MVVM框模式
