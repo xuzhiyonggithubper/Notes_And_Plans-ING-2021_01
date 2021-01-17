@@ -7,20 +7,20 @@
 - 主流MVVM框模式
 # 前端框架系统架构解刨
 ### MVC模式（数据单向通信）：模型（Model）、视图（View）和控制器（Controller）
-- View：接收用户动作（Dom事件，Ajax等），传递指令给Controller
-- Controller：接收到指令完成业务逻辑，要求Model改变状态
+- View：接收用户动作（Dom事件，Ajax等），传递指令给Controller。
+- Controller：接收到指令完成业务逻辑，要求Model改变状态。
 - Model：将新的数据发送给View，用户动作触发的结果反馈。
 ### MVVM模式（数据双向通信）：模型（Model）、视图（View）和视图模型（View&Model）
-- View：接收用户动作（Dom事件，Ajax等）
-- Model：与View&Model进行数据双向绑定，Model层监听View&Model的变化
-- View&Model监听View层请求状态的变化，同时刷新View层显示
+- View：接收用户动作（Dom事件，Ajax等）。
+- Model：与View&Model进行数据双向绑定，Model层监听View&Model的变化。
+- View&Model监听View层请求状态的变化，同时刷新View层显示。
 Angular，谷歌开发，MVVM框架。大型复杂应用。
 React，Facebook开发JS库（不是严格意义上的MVVM框架），标准的JS规范。中大型应用、移动跨平台。
 Vue，尤雨溪，2014年开发，MVVM框架，中小型轻量级应用。
-
 # Vue框架下载
 vue.js下载地址：https://vuejs.org/js/vue.js
 # Vue框架引入方式
+- 本地文件引入，下载vue.js放置在相对目录。
 - CDN方式引入，CDN是内容分发网络，就近引入原则，CDN方式引入vue.js地址：https://unpkg.com/vue
 - NPM和Webpack模块包引入
 	- NPM是前端主要开发工具，把复杂的js文件库组织成模块化管理方式，使用时，只需要引入指定模块即可。
