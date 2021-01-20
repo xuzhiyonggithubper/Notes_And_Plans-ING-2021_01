@@ -5,6 +5,11 @@
 - v-html
 # 在HTML属性中输出变量
 - v-bind
+# 输出JS表达式
+- {{number+1}}
+- {{ok?'yes':'no'}}
+- {{message.split('').reverse().join('')}}
+- **<div v-bind:id="'list-' + id"></div>**
 # 实例代码
 ```html
 <!DOCTYPE html>
