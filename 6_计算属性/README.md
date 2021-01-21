@@ -1,2 +1,57 @@
 # 计算属性
+- JS语法computed
+- Vue函数形式methods
 # 计算属性示例
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>计算属性</title>
+</head>
+<body>
+
+<!--DOM-->
+<div id="app">
+sum1={{sum}}<br>
+sum2={{sum}}<br>
+<span v-html="sum"></span><br>
+
+sum2={{test1()}}<br>
+sum1={{test2()}}<br>
+</div>
+
+<!--引入vue-->
+<script src="../js/vue.js"></script>
+
+<!--javascript-->
+<script>
+<!--vue&javascript-->
+	var data={
+	price:10,
+	num:5
+	};
+	var vm=new Vue({
+	el:'#app',
+	data:data,
+	computed:{
+	sum:function(){
+	console.log('sum');
+	return '<span>'+this.$data.price*this.$data.num			+'</span>';
+	}
+	},
+	methods:{
+		test1:function(){
+		console.log('methods1');
+		return this.$data.price*this.$data.num;
+		},
+		test2:function(){
+		console.log('methods2');
+		return this.$data.price/this.$data.num;
+		}
+	}
+	});
+</script>
+</body>
+</html>
+```

@@ -8,27 +8,12 @@
 
 <!--DOM-->
 <div id="app">
-<div>
-	str={{str}}
-</div>
-<div>
-	name=vm.$data.user.name<br>
-	age={{user.age}}<br>
-</div>
+sum1={{sum}}<br>
+sum2={{sum}}<br>
+<span v-html="sum"></span><br>
 
-<div>
-	<ul>
-		<li>{{names[0]}}</li>
-		<li>{{names[1]}}</li>
-		<li>{{names[2]}}</li>
-	</ul>
-</div>
-<div>
-	html={{html}}<br>
-</div>
-<div v-html="html"></div>
-<a v-bind:href="link.link">{{link.name}}</a><br>
-<a :href="link.link">{{link.name}}</a>
+sum2={{test1()}}<br>
+sum1={{test2()}}<br>
 </div>
 
 <!--引入vue-->
@@ -38,23 +23,29 @@
 <script>
 <!--vue&javascript-->
 	var data={
-	str:'xu',
-	user:{
-	name:'xu',
-	age:'20'
-	},
-	names:['Tom','Bob','Robot'],
-	html:'<font color=Red>xuzhiyong</font>',
-	link:{
-		name:'home',
-		link:'http://www.baidu.com'	
-	}
+	price:10,
+	num:5
 	};
 	var vm=new Vue({
 	el:'#app',
 	data:data,
+	computed:{
+	sum:function(){
+	console.log('sum');
+	return '<span>'+this.$data.price*this.$data.num			+'</span>';
+	}
+	},
+	methods:{
+		test1:function(){
+		console.log('methods1');
+		return this.$data.price*this.$data.num;
+		},
+		test2:function(){
+		console.log('methods2');
+		return this.$data.price/this.$data.num;
+		}
+	}
 	});
-	console.log(vm.$data.user.name)
 </script>
 </body>
 </html>
