@@ -8,12 +8,21 @@
 
 <!--DOM-->
 <div id="app">
-sum1={{sum}}<br>
-sum2={{sum}}<br>
-<span v-html="sum"></span><br>
-
-sum2={{test1()}}<br>
-sum1={{test2()}}<br>
+<h4>商品列表</h4>
+	<ul>
+		<li v-for="(goods,index) in goodsLists">{{index+1}}---{{goods.name}}---{{goods.price}}</li>
+	</ul>
+	<ul>
+		<li v-for="goods in goodsLists">
+			<ul>
+				<li v-for="(value,key,index) in goods">{{index}}---{{key}}---{{value}}</li>
+			</ul>
+	</ul>
+<div>
+	<ul>
+		<li v-for="goods in filterGoodsLists">{{goods.name}}---{{goods.price}}</li>
+	</ul>
+</div>
 </div>
 
 <!--引入vue-->
@@ -23,26 +32,20 @@ sum1={{test2()}}<br>
 <script>
 <!--vue&javascript-->
 	var data={
-	price:10,
-	num:5
+	goodsLists:[
+		{name:'apple',price:'9999'},
+		{name:'huawei',price:'2012'},
+		{name:'oppo',price:'9872'}	
+		]
 	};
 	var vm=new Vue({
 	el:'#app',
 	data:data,
 	computed:{
-	sum:function(){
-	console.log('sum');
-	return '<span>'+this.$data.price*this.$data.num			+'</span>';
-	}
-	},
-	methods:{
-		test1:function(){
-		console.log('methods1');
-		return this.$data.price*this.$data.num;
-		},
-		test2:function(){
-		console.log('methods2');
-		return this.$data.price/this.$data.num;
+		filterGoodsLists:function(){
+		return this.goodsLists.filter(function(goods){
+		return goods.price>3000;
+		})
 		}
 	}
 	});
