@@ -9,7 +9,7 @@
 |updated|视图数据改变之后|
 |beforeDestory|Vue对象销毁之前|
 |destroyed|Vue对象销毁之后|
-# Vue生命周期示例
+# 示例
 ```html
 <!DOCTYPE html>
 <html lang="en">

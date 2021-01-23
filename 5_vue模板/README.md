@@ -10,7 +10,7 @@
 - {{ok?'yes':'no'}}
 - {{message.split('').reverse().join('')}}
 - **<div v-bind:id="'list-' + id"></div>**
-# 实例代码
+# 示例
 ```html
 <!DOCTYPE html>
 <html lang="en">

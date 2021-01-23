@@ -1,7 +1,7 @@
 # 计算属性
 - JS语法computed
 - Vue函数形式methods
-# 计算属性示例
+# 示例
 ```html
 <!DOCTYPE html>
 <html lang="en">

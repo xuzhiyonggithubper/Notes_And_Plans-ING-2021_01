@@ -1,6 +1,6 @@
 # Vue实例对象概念
 Vue程序核心是Vue实例对象，即ViewModel，Vue对象连接视图层（HTML页面）和模型层（数据），ViewModel进行数据双向绑定，View动作触发→DOM Listeners→Model，Model变化→Data Bindings→View更新。
-# Vue实例对象创建
+# 示例
 ```html
 <!DOCTYPE html>
 <html lang="en">
