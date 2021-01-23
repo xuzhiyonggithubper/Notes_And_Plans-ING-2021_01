@@ -1,1 +1,10 @@
-# Test
+# 数组更新检测方法一：Vue静态方法
+- Vue.set()
+- vm对象.$set()
+# 数组更新检测方法二：数组变异方法
+- 添加删除元素push()、pop()、shift()、unshift()
+- 数组元素排序sort()、reverse()
+- 更广义地添加/删除splice()
+	- array.splice(删除位置下标，删除元素个数)
+	- array.splice(添加位置下标，0，待添加元素)
+- slice()获取值
