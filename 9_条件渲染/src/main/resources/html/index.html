@@ -8,24 +8,19 @@
 
 <!--DOM-->
 <div id="app">
-<h4>Test</h4>
-<ul>
-	<li v-for="(e,index) in goodsLists">{{index+1}}---{{e}}</li>
-</ul>
-<!--
-vm.goodsLists.push('t1');#在数组尾部添加元素
-vm.goodsLists.push('t1');#在数组尾部删除元素
-vm.goodsLists.unshift('t1');#在数组首部添加元素
-vm.goodsLists.shift('t1');#在数组首部删除元素
-vm.users.sort(function(a,b){return a.age-b.age});#从小到大排序
-vm.users.splice(1,0,{name:'xii',age:99});#添加元素
-vm.users.splice(1,1);#删除元素
-vm.users.slice(1,2);#删除元素
--->
 <div>
+	<template v-if="users.length>2">
 	<ul>
-		<li v-for="(item,id) in users">{{id+1}}---{{item.name}}---{{item.age}}</li>
+	<li v-for="(item,id) in users">{{id+1}}---{{item.name}}---{{item.age}}</li>
 	</ul>
+	</template>
+	
+</div>
+<br>
+<div>
+	<div v-show="isLogined==true">
+		<h4>show</h4>
+	</div>
 </div>
 </div>
 
@@ -36,11 +31,7 @@ vm.users.slice(1,2);#删除元素
 <script>
 <!--vue&javascript-->
 	var data={
-	goodsLists:[
-		'm1',
-		'm2',
-		'm3'	
-		],
+	isLogined:false,
 	users:[
 	{name:'xu',age:20},
 	{name:'liu',age:30},

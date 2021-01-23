@@ -1,3 +1,55 @@
+# 条件渲染
 - v-for
 - v-if
 - v-show
+# 示例
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>条件渲染</title>
+</head>
+<body>
+
+<!--DOM-->
+<div id="app">
+<div>
+	<template v-if="users.length>2">
+	<ul>
+	<li v-for="(item,id) in users">{{id+1}}---{{item.name}}---{{item.age}}</li>
+	</ul>
+	</template>
+	
+</div>
+<br>
+<div>
+	<div v-show="isLogined==true">
+		<h4>show</h4>
+	</div>
+</div>
+</div>
+
+<!--引入vue-->
+<script src="../js/vue.js"></script>
+
+<!--javascript-->
+<script>
+<!--vue&javascript-->
+	var data={
+	isLogined:false,
+	users:[
+	{name:'xu',age:20},
+	{name:'liu',age:30},
+	{name:'wang',age:18},
+	]
+	};
+
+	var vm=new Vue({
+	el:'#app',
+	data:data,
+	});
+</script>
+</body>
+</html>
+```
