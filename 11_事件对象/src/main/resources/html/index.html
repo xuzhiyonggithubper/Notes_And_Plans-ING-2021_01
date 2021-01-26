@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>11_事件对象</title>
+</head>
+<body>
+
+<!--DOM-->
+<div id="app">
+<div>
+<button v-on:click="num+=1">increment 1</button><br>
+<button @click="num-=1">decrement 1</button><br>
+<button @click="increment">methods increment 1</button><br>
+<button @click="decrement">methods decrement 1</button><br>
+<div>
+	<h4>表单元素的键盘事件</h4>
+	<input type="text" @keyup="keyupevent"></input><br>
+	<h4>表单键盘弹起事件</h4>
+	<input type="text" @keyup.enter="keyonevent"></input><br>
+	<h4>事件修饰符</h4>
+	<a href="test.html" @click.prevent="aclick">加载html</a><br>
+</div>
+</div>
+num{{num}}<br>
+good{{good}}<br>
+book{{book}}<br>
+</div>
+
+<!--引入vue-->
+<script src="../js/vue.js"></script>
+
+<!--javascript-->
+<script>
+<!--vue&javascript-->
+	var data={
+	isLogined:false,
+	num:0,
+	good:0,
+	book:100
+	};
+
+	var vm=new Vue({
+	el:'#app',
+	data:data,
+	methods:{
+		increment:function(){
+		this.num++;
+		},
+		decrement:function(){
+		this.num--;
+		},
+		keyupevent:function(){
+		this.good++;
+		},
+		aclick:function(){
+		this.good--;
+		},
+		keyonevent:function(){
+		this.book++;
+		}
+	}
+	});
+</script>
+</body>
+</html>
