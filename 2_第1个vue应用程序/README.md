@@ -1,5 +1,4 @@
 # 第1个Vue应用程序
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
