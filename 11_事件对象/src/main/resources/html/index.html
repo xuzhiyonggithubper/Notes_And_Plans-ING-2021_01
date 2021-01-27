@@ -20,11 +20,9 @@
 			<td>{{index+1}}</td>
 			<td>{{goods.name}}</td>
 			<td>{{goods.price}}</td>
-			<td>
-				<a href="#">edit</a>
-			</td>
+			<td><a href="#" v-bind:data-index="index">edit</a></td>
 		</tr>
-	<table/>
+	</table>
 </div>
 </div>
 
@@ -49,6 +47,7 @@
 		if(event.target.nodeName.toLowerCase()=='a'){
 		console.log(event.target.nodeName);
 		console.log(event.type);
+		console.log("dataset-index="+event.target.dataset.index);
 		}
 		}
 	}
