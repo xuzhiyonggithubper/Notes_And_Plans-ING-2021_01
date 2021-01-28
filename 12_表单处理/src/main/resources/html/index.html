@@ -13,12 +13,19 @@
 	<input type="radio" v-model="gender" name="gender" value="man">男
 	<input type="radio" v-model="gender" name="gender" value="woman">女
 	select:{{gender}}
-</div>
 
+</div>
 <div id=2>
 	<hr>
-	<input type="text" v-model="name">
+	<input type="text" v-model="name" @blur="handleBlur">
 	text:{{name}}
+</div>
+<div id=3>
+select:
+<select v-model="province" @change="changeProvince">
+	<option value="hebei">hebei</option>
+	<option value="beijing">beijing</option>
+</select>
 </div>
 
 </div>
@@ -31,15 +38,21 @@
 <!--vue&javascript-->
 	var data={
 	name:'',
-	gender:''
+	gender:'man',
+	province:'beijing',
 	};
 
 	var vm=new Vue({
 	el:'#app',
 	data:data,
 	methods:{
-
-	}
+		handleBlur:function(){
+			console.log('失去焦点');
+		},
+		changeProvince:function(){
+			console.log(this.province);
+		}
+	},
 	});
 </script>
 </body>
