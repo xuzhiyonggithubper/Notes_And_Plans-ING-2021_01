@@ -1,10 +1,10 @@
-# 第1个Vue应用程序
+# 2_第1个vue应用程序
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>first application about vue</title>
+<title>2_第1个vue应用程序</title>
 </head>
 <body>
 
@@ -31,14 +31,14 @@ name={{name}}
 </body>
 </html>
 ```
-# Vue开发工具
+## 2_1Vue开发工具
 - Vue官方文档：https://cn.vuejs.org/v2/guide
 - NPM文档：https://www.kancloud.cn/shellway/npm-doc/199982
 - Webpack文档：https://doc/webpack-china.org/concepts/
-# Vue开发浏览器
+## 2_2Vue开发浏览器
 - chrome浏览器
 - Vue-devtools插件
-# 代码编写工具
+## 2_3代码编写工具
 - Atom
 - Sublime Text
 - Visual Studio Code（常用插件如下）

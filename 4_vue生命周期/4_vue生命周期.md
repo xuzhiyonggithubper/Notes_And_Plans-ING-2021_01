@@ -1,4 +1,5 @@
-# Vue生命周期钩子函数（回调函数）
+# 4_vue生命周期
+## 4_1Vue生命周期钩子函数（回调函数）
 |钩子函数|说明|
 |:---:|:---:|
 |beforeCreate|Vue对象创建之前|
@@ -9,13 +10,13 @@
 |updated|视图数据改变之后|
 |beforeDestory|Vue对象销毁之前|
 |destroyed|Vue对象销毁之后|
-# 示例
+## 4_2示例
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Vue生命周期</title>
+<title>4_vue生命周期</title>
 </head>
 <body>
 
