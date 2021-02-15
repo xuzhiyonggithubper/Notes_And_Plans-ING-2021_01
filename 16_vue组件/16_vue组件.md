@@ -1,0 +1,48 @@
+# 16_vue组件
+## 16_1示例
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>16_vue组件</title>
+</head>
+<body>
+
+<!--DOM-->
+<div id="app">
+<my-component></my-component>
+<local-component></local-component>
+<local></local>
+</div>
+
+<!--引入vue-->
+<script src="../js/vue.js"></script>
+
+<!--javascript-->
+<script>
+<!--vue&javascript-->
+	Vue.component('my-component',{
+		template:'<div>this is my-component content.</div>'
+	});
+	const localComponent={
+		template:'<div>this is local-component.</div>'
+	};
+	var data={
+	
+	};
+
+	var vm=new Vue({
+	el:'#app',
+	components:{
+		'local-component':localComponent,
+		//localComponent,
+		'local':{
+			template:'<div>my</div>'
+		}
+	}
+	});
+</script>
+</body>
+</html>
+```
