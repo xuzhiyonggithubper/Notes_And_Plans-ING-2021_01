@@ -5,7 +5,7 @@
 - 阶段3：框架开发阶段，MVC模式和MVVM模式。
 ## 1_2 前端框架系统架构
 - MVC和MVVM模式
-- 主流MVVM框模式
+- 主流MVVM模式
 ## 1_3 前端框架系统架构解刨
 ### 1_3_1 MVC模式（数据单向通信）：模型（Model）、视图（View）和控制器（Controller）
 - View：接收用户动作（Dom事件，Ajax等），传递指令给Controller。
